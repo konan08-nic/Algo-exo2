@@ -1,0 +1,51 @@
+FONCTION dot_product(v1,v2 : ARRAY_OF INTEGER, n:INTEGER)
+
+//declaration des variables 
+VAR
+i, ps,n : INTEGER
+v1:ARRAY_OF INTEGER[n];
+v2:ARRAY_OF INTEGER[n];
+//initialisation des variables
+i:=0;
+ps:=0;
+BEGIN
+    FOR i FROM 0 TO n-1 THEN STEP 1 Do
+    ps:=ps+ v1[i]*v2[i];
+    END_FOR
+    Return ps;
+END
+
+  ALGORITHM PRODUIT_SCALAIRE
+    //declaration des variables 
+ VAR
+    i, s,n : INTEGER;
+    v1 ARRAY_OF INTEGER[n];
+    v2 ARRAY_OF INTEGER[n];
+
+    // initialisation
+        s:=0;
+  BEGIN
+         //la longueur des deux vecteurs
+         Write("entrez la longueur des deux vecteurs svp");
+         Read(n)
+
+        // saisie des elements des vecteurs
+
+        FOR i FROM 0 TO n STEP 1 DO
+            Write("entrez l'element qui se trouvre a la" i+1"eme place");
+            Read(v1[i]);
+        END_FOR
+
+         FOR i FROM 0 TO n STEP 1 DO
+            Write("entrez l'element qui se trouvre a la" i+1"eme place");
+            Read(v2[i]);
+        END_FOR
+
+        //parametre de la fonction
+           s=s+dot_product(v1,v2,n);
+         IF (s==0) THEN
+            Write("les vecteurs" v1 "et" v2"sont orthogonaux");
+         ELSE
+            Write("les vecteurs" v1 "et" v2"ne sont pas orthogonaux");
+        END_IF
+    END

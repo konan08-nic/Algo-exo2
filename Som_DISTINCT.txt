@@ -1,0 +1,60 @@
+ALGORITHM SOMME
+
+//declaration des variables 
+
+VAR
+  tab1, tab2, tab3 :  ARRAY_OF INTEGER[10];
+  i, j, k, cpt,l,present, som : INTEGER;
+
+//initialisation des valeurs
+  i:=0;
+  j:=0;
+  som:=0;
+  k:=0;
+
+// saisie des elements du vecteur1 
+   Write("definissez le nombre d'element à remplir dans le tableau");
+   Read(k);
+  FOR i FROM 0 TO k STEP 1 DO
+     Write("Entrez l'élément " +i+1);
+     Read(tab1[i]);
+  END
+
+  // saisi des element du vecteur2
+
+    Write("definissez le nombre d'element à remplir dans le tableau");
+    Read(k);
+  FOR i FROM 0 TO k STEP 1 DO
+     Write("Entrez l'élément " +i+1);
+    Read(tab2[i]);
+
+  END 
+
+
+    //traitement
+
+    FOR i FROM 0 TO tab1.length-1 STEP 1 DO //Parcourir tout les elements de du prmier tableau
+      cpt:=tab1[i];
+      FOR j FROM 0 TO tab2.length-1 STEP 1 DO
+        IF (tab2[j] = cpt1) THEN
+         BREAK; 
+        END_IF
+     END_FOR
+       IF (j==tab2[j].length) THEN
+      som= som+cpt; 
+     END_IF
+    END_FOR
+
+    FOR j FROM 0 TO tab2.length-1 STEP 1 DO
+      cpt1:=tab2[j];
+      FOR i FROM 0 TO tab1.length-1 STEP 1 DO
+        IF (tab1[i] = cpt) THEN
+         BREAK;  
+        END_IF
+     END_FOR
+     IF (i==tab1[i].length) THEN
+      som := som+cpt; 
+     END_IF
+    END_FOR
+  
+

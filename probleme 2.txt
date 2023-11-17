@@ -1,0 +1,14 @@
+
+  
+    PROCEDURE dot_product(tb1:ARRAY_OF INTEGER, tb2: ARRAY_OF INTEGER)
+        VAR
+         i: INTEGER;
+         ps:INTEGER;
+        BEGIN
+         som:=0;
+          FOR i FROM 0 to tb1.length step 1 do
+            ps=som+tb1[i]*tb2[i];
+          END FOR
+          Write("le produit scalaire de ces deux vecteurs est" ps)
+    END
+    

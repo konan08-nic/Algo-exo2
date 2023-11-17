@@ -1,0 +1,52 @@
+
+PROCEDURE dot_product(v1,v2 : ARRAY_OF INTEGER, k:INTEGER)
+
+        //declaration des variables 
+                VAR
+                    i, ps,n : INTEGER
+                    v1 ARRAY_OF INTEGER[l];
+                    v2 ARRAY_OF INTEGER[l];
+
+                //initialisation des variables
+                    i:=0;
+                    ps:=0;
+
+                BEGIN
+                    FOR i FROM 0 TO l-1 THEN
+                    ps:=ps+ v1[i]*v2[i];
+                    END_FOR
+                    Write("le produit scalaire de " v1 "et" v2 "est ps=" ps );
+                END
+END
+
+ALGORITHM PRODUIT_SCALAIRE
+
+    //declaration des variables 
+    VAR
+        i, j ps,l : INTEGER;
+        v1 ARRAY_OF INTEGER[l];
+        v2 ARRAY_OF INTEGER[l];
+
+    BEGIN
+
+        Write("Entrez la la longueur des vecteurs");
+        Read(l);
+
+        FOR i FROM 0 TO n-1 STEP 1 DO
+        Write("Entrez le" i+1 "eme élément du vecteur v1");
+        Read(v1[i]);
+        END_FOR
+
+        FOR i FROM 0 TO n-1 STEP 1 DO
+         Write("Entrez le" i+1 "eme élément du vecteur v2");
+         Read(v1[i]);
+        END_FOR
+
+    //parametre
+        dot_product( VAR v1[n],v2[n], n);
+        ps:=ps;
+        IF(ps=0) THEN 
+         Write("les 2 vecteurs sont orthogonaux");
+        ELSE Write("les 2 vecteurs ne sont pas orthogonaux")
+        END_IF 
+END
